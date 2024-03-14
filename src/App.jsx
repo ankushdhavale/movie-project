@@ -43,12 +43,16 @@ console.log(allMovieList);
 
 
   return (
-    <>
-    <div>
+    <div className="flex text-center justify-center items-center">
+    <div className="flex">
+      <h1>Mirchi Movies</h1>
+      <p>Your Place To Chill!</p>
+    <p>
       <input type="text" 
          onChange={handelInput}/>
          <button onClick={fetchAllMovie(searchInput)}>Search</button>
-      </div>
+      </p>
+    </div>
       <div className=' flex flex-col'>
         {
           allMovieList.map((movieItem)=>{
@@ -58,7 +62,7 @@ console.log(allMovieList);
           )})
         }
     </div>
-    </>
+    </div>
   )
 }
 
